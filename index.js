@@ -78,3 +78,18 @@
 // }
 
 // Задание 7.
+const arr = [2, 67, 89, 23, 91, 12, 67, 23, 7, 11, 786, 1987656, 0, '', 0, true, false]
+let evenCount = 0;
+let oddCount = 0;
+let zeroCount = 0;
+for (i = 0; i < arr.length; i++) {
+    if (Number.isFinite(arr[i])) {
+        if (arr[i] * 1 === 0) {zeroCount += 1}
+        else if (arr[i] % 2 === 0) {evenCount++}
+        else if (arr[i] % 2 === 1) {oddCount++};
+    }
+}
+
+if (zeroCount) {console.log(`Количетво нулей в массиве равно = ${zeroCount}`)}
+console.log(`Количетво четных чисел в массиве равно = ${evenCount}`)
+console.log(`Количетво нечетных чисел в массиве равно = ${oddCount}`)
